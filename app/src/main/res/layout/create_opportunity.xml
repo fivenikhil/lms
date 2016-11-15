@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorblack"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opportunity"
+            android:textSize="25sp"
+            android:textColor="@color/colorWhite"
+            android:id="@+id/toolbar_title" />
+
+     </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_lob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LOB:*"
+                android:textColor="@color/txt_color"
+                android:textSize="@dimen/text_size_normal"/>
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:layout_marginTop="10dp"
+                android:background="@drawable/spin_draw"
+                android:spinnerMode="dialog"
+                android:id="@+id/spin_lob"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:id="@+id/txt_application"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Industry Application:*"
+                android:textColor="@color/txt_color"
+                android:textSize="@dimen/text_size_normal"
+                android:layout_marginTop="16dp"/>
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:layout_marginTop="10dp"
+                android:background="@drawable/spin_draw"
+                android:spinnerMode="dialog"
+                android:id="@+id/spin_IndApplication"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:id="@+id/txt_subapp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sub Application:*"
+                android:textColor="@color/txt_color"
+                android:textSize="@dimen/text_size_normal"
+                android:layout_marginTop="16dp"/>
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:layout_marginTop="10dp"
+                android:background="@drawable/spin_draw"
+                android:spinnerMode="dialog"
+                android:id="@+id/spin_SubApplication"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"/>
+
+            <ImageView
+                android:visibility="invisible"
+                android:id="@+id/anim"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:opacity="translucent"/>
+
+
+            <TextView
+                android:id="@+id/txt_leadqty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lead Quality:*"
+                android:textColor="@color/txt_color"
+                android:textSize="@dimen/text_size_normal"
+                android:layout_marginTop="16dp"/>
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:layout_marginTop="10dp"
+                android:background="@drawable/spin_draw"
+                android:spinnerMode="dialog"
+                android:id="@+id/spin_quality"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:id="@+id/txt_enquiry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Enquiry Source:*"
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/txt_color"/>
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:background="@drawable/spin_draw"
+                android:spinnerMode="dialog"
+                android:id="@+id/spin_enquiry"
+                android:layout_marginTop="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:id="@+id/txt_sales"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sales Stage:*"
+                android:textColor="@color/txt_color"
+                android:textSize="@dimen/text_size_normal"
+                android:layout_marginTop="16dp"/>
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:background="@drawable/spin_draw"
+                android:spinnerMode="dialog"
+                android:id="@+id/spin_sales"
+                android:layout_marginTop="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"/>
+
+
+            <LinearLayout
+                android:id="@+id/linear_opp"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/txt_model"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Model:"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/text_size_normal"
+                    android:layout_marginTop="16dp"/>
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spin_draw"
+                    android:spinnerMode="dialog"
+                    android:id="@+id/spin_model"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"/>
+
+
+                <TextView
+                    android:id="@+id/txt_qty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Quantity:"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/text_size_normal"
+                    android:layout_marginTop="16dp"/>
+
+                <EditText
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/edit_qty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:maxLines="2"
+                    android:backgroundTint="@android:color/white"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    android:id="@+id/txt_body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Body Length:"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/text_size_normal"
+                    android:layout_marginTop="16dp"/>
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spin_draw"
+                    android:spinnerMode="dialog"
+                    android:id="@+id/spin_body"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"/>
+
+
+                <TextView
+                    android:id="@+id/txt_load"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Load Body:"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/text_size_normal"
+                    android:layout_marginTop="16dp"/>
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spin_draw"
+                    android:spinnerMode="dialog"
+                    android:id="@+id/spin_load"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"/>
+
+
+                <TextView
+                    android:id="@+id/txt_support"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Support:"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/text_size_normal"
+                    android:layout_marginTop="16dp"/>
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spin_draw"
+                    android:spinnerMode="dialog"
+                    android:id="@+id/spin_support"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"/>
+
+                <TextView
+                    android:id="@+id/txt_remark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Support Remarks:"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/text_size_normal"
+                    android:layout_marginTop="16dp"/>
+
+                <EditText
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/edit_remark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:maxLines="2"
+                    android:backgroundTint="@android:color/white"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    android:id="@+id/txt_action"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Action:"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/text_size_normal"
+                    android:layout_marginTop="16dp"/>
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spin_draw"
+                    android:spinnerMode="dialog"
+                    android:id="@+id/spin_action"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"/>
+
+                <TextView
+                    android:id="@+id/txt_actionRemark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Action Remark:"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/text_size_normal"
+                    android:layout_marginTop="16dp"/>
+
+                <EditText
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/edit_actionRemark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:maxLines="2"
+                    android:backgroundTint="@android:color/white"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    android:id="@+id/txt_finame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Financer Name:"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/text_size_normal"
+                    android:layout_marginTop="16dp"/>
+
+                <EditText
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/edit_finame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:maxLines="2"
+                    android:backgroundTint="@android:color/white"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    android:id="@+id/txt_branch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Branch:"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/text_size_normal"
+                    android:layout_marginTop="16dp"/>
+
+                <EditText
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/edit_branch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:maxLines="2"
+                    android:backgroundTint="@android:color/white"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    android:id="@+id/txt_exename"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Executive Name:"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/text_size_normal"
+                    android:layout_marginTop="16dp"/>
+
+                <EditText
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/edit_exename"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:maxLines="2"
+                    android:backgroundTint="@android:color/white"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    android:id="@+id/txt_document"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Documents Collected:"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/text_size_normal"
+                    android:layout_marginTop="16dp"/>
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spin_draw"
+                    android:spinnerMode="dialog"
+                    android:id="@+id/spin_docs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"/>
+
+                <TextView
+                    android:id="@+id/txt_plan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Purchase Plan:"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/text_size_normal"
+                    android:layout_marginTop="16dp"/>
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spin_draw"
+                    android:spinnerMode="dialog"
+                    android:id="@+id/spin_plan"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"/>
+
+                <TextView
+                    android:id="@+id/txt_like"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Likelihood:"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/text_size_normal"
+                    android:layout_marginTop="16dp"/>
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spin_draw"
+                    android:spinnerMode="dialog"
+                    android:id="@+id/spin_like"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"/>
+
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/txt_sale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Reason for lost sale:"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/text_size_normal"
+                    android:layout_marginTop="16dp"/>
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spin_draw"
+                    android:spinnerMode="dialog"
+                    android:id="@+id/spin_rsale"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"/>
+
+                <TextView
+                    android:id="@+id/txt_ftype"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Follow Type:"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/text_size_normal"
+                    android:layout_marginTop="16dp"/>
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spin_draw"
+                    android:spinnerMode="dialog"
+                    android:id="@+id/spin_ftype"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"/>
+
+                <TextView
+                    android:id="@+id/fdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Follow Date:"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/text_size_normal"
+                    android:layout_marginTop="16dp"/>
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/txt_fdate"
+                    android:hint="DD/MM/YYYY"
+                    android:textColorHint="@color/colorWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/calender_gry"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_size_normal"
+                    android:backgroundTint="@android:color/white"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="16dp"
+                android:id="@+id/txt_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Notes:"
+                android:textColor="@color/txt_color"
+                android:textSize="@dimen/text_size_normal"/>
+
+            <EditText
+                android:layout_marginTop="5dp"
+                android:id="@+id/edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:maxLines="3"
+                android:backgroundTint="@android:color/white"
+                android:textColor="@color/colorWhite"/>
+
+            <RelativeLayout
+               android:layout_marginTop="50dp"
+               android:layout_marginBottom="20dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <Button
+                   android:textAllCaps="false"
+                   android:id="@+id/btn_savecontine"
+                   android:layout_width="160dp"
+                   android:layout_height="wrap_content"
+                   android:background="@drawable/curved_buttons"
+                   android:textSize="@dimen/text_size_normal"
+                   android:layout_gravity="end"
+                   android:textColor="@color/colorWhite"
+                   android:text="Save &amp; Continue"
+                   android:layout_alignParentTop="true"
+                   android:layout_alignParentEnd="true" />
+
+               <Button
+                   android:textAllCaps="false"
+                   android:id="@+id/btn_save"
+                   android:layout_width="80dp"
+                   android:layout_height="wrap_content"
+                   android:background="@drawable/curved_buttons"
+                   android:textSize="@dimen/text_size_normal"
+                   android:layout_gravity="center"
+                   android:textColor="@color/colorWhite"
+                   android:text="Save"
+                   android:layout_alignParentTop="true"
+                   android:layout_toStartOf="@+id/btn_savecontine"
+                   android:layout_marginEnd="40dp" />
+           </RelativeLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

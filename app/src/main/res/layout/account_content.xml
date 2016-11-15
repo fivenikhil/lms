@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:expandable="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorblack"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accounts"
+            android:textSize="25sp"
+            android:textColor="@color/colorWhite"
+            android:id="@+id/toolbar_title" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/loading"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/loading"/>
+
+            <ProgressBar
+                android:id="@+id/ProgressBar"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:indeterminateDrawable="@drawable/loading"
+                />
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Company Name:*"
+                android:textColor="@color/txt_color"
+                android:textSize="@dimen/text_size_normal"/>
+
+            <EditText
+                android:id="@+id/edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:maxLines="1"
+                android:backgroundTint="@android:color/white"
+                android:textColor="@color/colorWhite">
+
+             </EditText>
+
+
+            <TextView
+                android:id="@+id/txt_site"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Site/Location:*"
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/txt_color"/>
+
+            <EditText
+                android:id="@+id/edit_site"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:backgroundTint="@android:color/white"
+                android:textColor="@color/colorWhite"/>
+
+            <TextView
+                android:id="@+id/txt_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Address:*"
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/txt_color"/>
+
+            <EditText
+                android:id="@+id/edit_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPostalAddress"
+                android:ems="10"
+                android:maxLines="2"
+                android:backgroundTint="@android:color/white"
+                android:textColor="@color/colorWhite"/>
+
+
+            <TextView
+                android:id="@+id/txt_pincode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Pincode:*"
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/txt_color"/>
+
+            <EditText
+                android:id="@+id/edit_pincode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text|number"
+                android:ems="10"
+                android:backgroundTint="@android:color/white"
+                android:textColor="@color/colorWhite"/>
+
+            <TextView
+                android:id="@+id/txt_taluk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Taluk:"
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/txt_color"/>
+
+            <EditText
+                android:id="@+id/edit_taluk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:maxLines="1"
+                android:backgroundTint="@android:color/white"
+                android:textColor="@color/colorWhite"/>
+
+            <TextView
+                android:id="@+id/txt_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="City:*"
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/txt_color"/>
+
+            <EditText
+                android:id="@+id/edit_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:maxLines="1"
+                android:backgroundTint="@android:color/white"
+                android:textColor="@color/colorWhite"/>
+
+            <TextView
+                android:id="@+id/txt_district"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="District:"
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/txt_color"/>
+
+            <EditText
+                android:id="@+id/edit_district"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:maxLines="1"
+                android:backgroundTint="@android:color/white"
+                android:textColor="@color/colorWhite"/>
+
+
+            <TextView
+                android:id="@+id/txt_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="State:"
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/txt_color"/>
+
+            <EditText
+                android:id="@+id/edit_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:maxLines="1"
+                android:backgroundTint="@android:color/white"
+                android:textColor="@color/colorWhite"/>
+
+            <TextView
+                android:id="@+id/txt_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Main Phone:*"
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/txt_color"/>
+
+            <EditText
+                android:id="@+id/edit_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:ems="10"
+                android:maxLines="1"
+                android:backgroundTint="@android:color/white"
+                android:textColor="@color/colorWhite"/>
+
+
+            <TextView
+                android:id="@+id/txt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Email:*"
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/txt_color"/>
+
+            <EditText
+                android:id="@+id/edit_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:maxLines="1"
+                android:backgroundTint="@android:color/white"
+                android:textColor="@color/colorWhite"/>
+
+            <TextView
+                android:id="@+id/txt_pancard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="PAN Card:*"
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/txt_color"/>
+
+            <EditText
+                android:id="@+id/edit_pancard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:maxLines="1"
+                android:backgroundTint="@android:color/white"
+                android:textColor="@color/colorWhite"/>
+
+            <TextView
+                android:id="@+id/txt_accounttype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="Account Type:*"
+                android:visibility="invisible"
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/txt_color"/>
+
+            <Spinner
+                android:prompt="@string/action_select"
+                android:visibility="invisible"
+                android:background="@drawable/custom_spinner_bg"
+                android:spinnerMode="dropdown"
+                android:id="@+id/spin_accounttype"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"/>
+
+            <TextView
+                android:id="@+id/txt_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Account Category:*"
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/txt_color"/>
+
+            <Spinner
+                android:drawSelectorOnTop="true"
+                android:background="@drawable/spin_draw"
+                android:spinnerMode="dialog"
+                android:id="@+id/spin_account"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:id="@+id/txt_fleet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Fleet Size:*"
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/txt_color"/>
+
+            <Spinner
+                android:background="@drawable/spin_draw"
+                android:spinnerMode="dialog"
+                android:id="@+id/spin_fleet"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"/>
+
+           <!-- <TextView
+                android:id="@+id/txt_enquiry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Enquiry Source:*"
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/txt_color"/>
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:background="@drawable/custom_spinner_bg"
+                android:spinnerMode="dropdown"
+                android:id="@+id/spin_enquiry"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"/>-->
+
+
+            <com.andexert.expandablelayout.library.ExpandableLayout
+                android:layout_marginTop="15dp"
+                android:id="@+id/expandableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                expandable:headerLayout="@layout/account_header"
+                expandable:contentLayout="@layout/account_header_content">
+            </com.andexert.expandablelayout.library.ExpandableLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:textAllCaps="false"
+                    android:id="@+id/btn_savecontine"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/curved_buttons"
+                    android:textSize="@dimen/text_size_normal"
+                    android:layout_gravity="end"
+                    android:textColor="@color/colorWhite"
+                    android:text="Save &amp; Continue"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true" />
+
+                <Button
+                    android:textAllCaps="false"
+                    android:id="@+id/btn_save"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/curved_buttons"
+                    android:textSize="@dimen/text_size_normal"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:text="Save"
+                    android:layout_alignParentTop="true"
+                    android:layout_toStartOf="@+id/btn_savecontine"
+                    android:layout_marginEnd="40dp" />
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

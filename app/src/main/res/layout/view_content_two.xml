@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <CheckBox
+        android:text="914R"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chck_one"
+        android:textSize="@dimen/text_size_normal"
+        android:textColor="@color/colorblack" />
+
+    <CheckBox
+        android:text="1214R"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chck_two"
+        android:textSize="@dimen/text_size_normal"
+        android:textColor="@color/colorblack" />
+
+    <CheckBox
+        android:text="3128C"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chck_thre"
+        android:textSize="@dimen/text_size_normal"
+        android:textColor="@color/colorblack" />
+</LinearLayout>

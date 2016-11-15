@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#000"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_layout">
+
+        <TableLayout
+            android:id="@+id/table_new"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="5dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/table_row_bg"
+                android:padding="5dp">
+
+
+                <TextView
+                    android:paddingRight="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_cell_bg"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp"
+                    android:text="Model" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:background="@drawable/table_cell_bg"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp"
+                    android:text="Contact No." />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp"
+                    android:text="Sales Stage" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/model"
+        android:textColor="@color/colorWhite"
+        android:textSize="17sp"
+        android:text="9999FRC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/contact"
+        android:layout_alignBottom="@+id/contact"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="9dp" />
+
+
+    <TextView
+        android:id="@+id/contact"
+        android:textColor="@color/colorWhite"
+        android:textSize="17sp"
+        android:text="9652017590"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear"
+        android:layout_toEndOf="@+id/model"
+        android:layout_marginStart="19dp" />
+
+    <TextView
+        android:id="@+id/stage"
+        android:textColor="@color/colorWhite"
+        android:textSize="17sp"
+        android:text="1. Account Created"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="5dp" />
+
+
+</RelativeLayout>

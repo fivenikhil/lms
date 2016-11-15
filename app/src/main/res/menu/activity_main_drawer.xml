@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/grp1" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/icon_menu_dashboard"
+            android:title="Dashboard" />
+    </group>
+
+    <group android:id="@+id/grp2" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_leads"
+            android:icon="@drawable/icon_menu_leads"
+            android:title="Accounts" />
+    </group>
+
+    <group android:id="@+id/grp3" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_configurator"
+            android:icon="@drawable/icon_menu_configurator"
+            android:title="Opportunity" />
+    </group>
+
+    <group android:id="@+id/grp4" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_finance"
+            android:icon="@drawable/icon_menu_finance"
+            android:title="Finance" />
+    </group>
+
+
+    <group android:id="@+id/grp5" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_creditapp"
+            android:icon="@drawable/icon_menu_creditapp"
+            android:title="Credit Application" />
+    </group>
+
+
+    <group android:id="@+id/grp6" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_followup"
+            android:icon="@drawable/icon_menu_followup"
+            android:title="Follow Up" />
+    </group>
+
+
+    <group android:id="@+id/grp7" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_report"
+            android:icon="@drawable/icon_menu_report"
+            android:title="Report" />
+    </group>
+
+
+    <group android:id="@+id/grp8" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_salesfunnel"
+            android:icon="@drawable/icon_menu_pipeline"
+            android:title="Sales Funnel" />
+    </group>
+
+    <group android:id="@+id/grp9" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/icon_menu_logout"
+            android:title="Logout" />
+    </group>
+
+
+</menu>

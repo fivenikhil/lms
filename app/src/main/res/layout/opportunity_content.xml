@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#000"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opportunity"
+            android:textSize="25sp"
+            android:textColor="@color/colorWhite"
+            android:id="@+id/toolbar_title" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:padding="5dp"
+        android:id="@+id/linear"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:id="@+id/table_new"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:stretchColumns="*"
+                android:showDividers="middle">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_row_bg"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:paddingRight="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_cell_bg"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp"
+                        android:text="Name" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:background="@drawable/table_cell_bg"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp"
+                        android:text="Contact No." />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp"
+                        android:text="Site/Location" />
+                </TableRow>
+
+            </TableLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <ListView
+            android:id="@+id/list_opp"
+            android:divider="@drawable/hor_line"
+            android:dividerHeight="0.2dp"
+            android:layout_width="match_parent"
+            android:layout_height="410dp">
+
+        </ListView>
+      <!--  <ExpandableListView
+            android:id="@+id/list_opp"
+            android:divider="@drawable/hor_line"
+            android:dividerHeight="0.2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ExpandableListView>-->
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/buttonfirst"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/colorblack"
+            android:text="First" />
+
+        <Button
+            android:id="@+id/buttonprev"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/buttonfirst"
+            android:textColor="@color/colorblack"
+            android:drawableLeft="@drawable/arrow_right"
+            android:text=" PREV" />
+
+        <Button
+            android:id="@+id/buttonlast"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/colorblack"
+            android:text="LAST" />
+
+        <Button
+            android:id="@+id/buttonnext"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:drawableRight="@drawable/arrow_left"
+            android:layout_toLeftOf="@+id/buttonlast"
+            android:textColor="@color/colorblack"
+            android:text="NEXT " />
+
+        <TextView
+            android:id="@+id/displaying"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@android:id/list"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/buttonnext"
+            android:layout_toRightOf="@+id/buttonprev"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/displaying"
+            android:layout_centerHorizontal="true"
+            android:indeterminateOnly="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

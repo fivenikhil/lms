@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:expandable="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorblack"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Follow up"
+            android:textSize="25sp"
+            android:textColor="@color/colorWhite"
+            android:id="@+id/toolbar_title" />
+
+     </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.andexert.expandablelayout.library.ExpandableLayout
+                android:id="@+id/expandableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                expandable:headerLayout="@layout/followup_header_one"
+                expandable:contentLayout="@layout/view_content_one">
+
+            </com.andexert.expandablelayout.library.ExpandableLayout>
+
+            <com.andexert.expandablelayout.library.ExpandableLayout
+                android:layout_marginTop="20dp"
+                android:id="@+id/expandableLayout_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                expandable:headerLayout="@layout/followup_header_two"
+                expandable:contentLayout="@layout/view_content_two">
+
+            </com.andexert.expandablelayout.library.ExpandableLayout>
+
+
+            <TextView
+                android:id="@+id/txt_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Follow-up Type:*"
+                android:textColor="@color/txt_color"
+                android:textSize="@dimen/text_size_normal"
+                android:layout_marginTop="16dp"/>
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:layout_marginTop="10dp"
+                android:background="@drawable/spin_draw"
+                android:spinnerMode="dialog"
+                android:id="@+id/spin_followtype"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:id="@+id/txt_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Follow-up Date:*"
+                android:textColor="@color/txt_color"
+                android:textSize="@dimen/text_size_normal"
+                android:layout_marginTop="16dp"/>
+
+           <TextView
+               android:id="@+id/txt_datepicker"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:drawableRight="@drawable/calender_gry"
+               android:textColor="@color/colorWhite"
+               android:textSize="@dimen/text_size_normal"
+               android:backgroundTint="@android:color/white">
+           </TextView>
+
+
+            <TextView
+                android:id="@+id/txt_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status:*"
+                android:textColor="@color/txt_color"
+                android:textSize="@dimen/text_size_normal"
+                android:layout_marginTop="16dp"/>
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:layout_marginTop="10dp"
+                android:background="@drawable/spin_draw"
+                android:spinnerMode="dropdown"
+                android:id="@+id/spin_status"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:id="@+id/txt_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Follow-up Notes:*"
+                android:textColor="@color/txt_color"
+                android:textSize="@dimen/text_size_normal"
+                android:layout_marginTop="16dp"/>
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:layout_marginTop="10dp"
+                android:background="@drawable/spin_draw"
+                android:spinnerMode="dropdown"
+                android:id="@+id/spin_notes"
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"/>
+
+            <Button
+                android:textAllCaps="false"
+                android:id="@+id/btn_save"
+                android:layout_marginTop="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/curved_buttons"
+                android:textSize="@dimen/text_size_normal"
+                android:layout_gravity="end"
+                android:textColor="@color/colorWhite"
+                android:text="Save"
+                android:layout_marginBottom="20dp"/>
+         </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
